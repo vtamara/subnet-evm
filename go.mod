@@ -50,6 +50,10 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )
 
+replace github.com/ava-labs/avalanche-network-runner v1.7.6 => github.com/vtamara/avalanche-network-runner v1.7.7-0.20240305235213-dd464ec0e107
+
+replace github.com/ava-labs/avalanchego v1.11.1 => github.com/vtamara/avalanchego v1.11.2-0.20240305234759-600eca81c3cf
+
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect
 	github.com/DataDog/zstd v1.5.2 // indirect
@@ -144,3 +148,5 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/cockroachdb/pebble v0.0.0-20230209160836-829675f94811 => github.com/vtamara/pebble v0.0.0-20240304195718-33499868d65e
