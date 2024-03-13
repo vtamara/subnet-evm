@@ -162,3 +162,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	rsc.io/tmplfunc v0.0.3 // indirect
 )
+
+replace github.com/supranational/blst v0.3.11 => github.com/dot-asm/blst v0.1.1-0.20240309172718-1e1fab113d0e
