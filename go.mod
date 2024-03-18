@@ -1,11 +1,13 @@
 module github.com/ava-labs/subnet-evm
 
-go 1.20
+go 1.21
+
+toolchain go1.22.0
 
 require (
 	github.com/VictoriaMetrics/fastcache v1.10.0
 	github.com/ava-labs/avalanche-network-runner v1.7.4-rc.0
-	github.com/ava-labs/avalanchego v1.11.0-fuji
+	github.com/ava-labs/avalanchego v1.11.0
 	github.com/cespare/cp v0.1.0
 	github.com/davecgh/go-spew v1.1.1
 	github.com/deckarep/golang-set/v2 v2.1.0
@@ -50,7 +52,7 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )
 
-replace github.com/ava-labs/avalanche-network-runner v1.7.4-rc.0 => github.com/vtamara/avalanche-network-runner v1.7.4-rc.0.0.20240306181634-e4cb6dbd03a2
+replace github.com/ava-labs/avalanche-network-runner v1.7.4-rc.0 => github.com/vtamara/avalanche-network-runner v1.7.7-0.20240318155026-05141d15f9a7
 
 replace github.com/ava-labs/avalanchego v1.11.0-fuji => github.com/vtamara/avalanchego v1.11.0-rc.1.0.20240306182016-76155f8e8304
 
@@ -58,7 +60,7 @@ require (
 	github.com/DataDog/zstd v1.5.2 // indirect
 	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
-	github.com/ava-labs/coreth v0.12.11-rc.3 // indirect
+	github.com/ava-labs/coreth v0.13.0-rc.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bits-and-blooms/bitset v1.7.0 // indirect
 	github.com/btcsuite/btcd/btcec/v2 v2.3.2 // indirect
@@ -163,5 +165,7 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	rsc.io/tmplfunc v0.0.3 // indirect
 )
+
+replace github.com/supranational/blst v0.3.11 => github.com/supranational/blst v0.3.12-0.20240316125559-704c7f6d5f99
 
 replace github.com/cockroachdb/pebble v0.0.0-20230209160836-829675f94811 => github.com/vtamara/pebble v0.0.0-20240304195718-33499868d65e
