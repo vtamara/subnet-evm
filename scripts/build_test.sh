@@ -17,8 +17,15 @@ source "$SUBNET_EVM_PATH"/scripts/versions.sh
 # Load the constants
 source "$SUBNET_EVM_PATH"/scripts/constants.sh
 
+
+
+OPRACE="-race"
+UNAME="$(eval uname)"
+if (test "$UNAME" = "OpenBSD") then {
+  OPRACE=""
+} fi;
 # We pass in the arguments to this script directly to enable easily passing parameters such as enabling race detection,
 # parallelism, and test coverage.
 # DO NOT RUN tests from the top level "tests" directory since they are run by ginkgo
 # shellcheck disable=SC2046
-go test -tags test -shuffle=on -race -timeout="${TIMEOUT:-600s}" -coverprofile=coverage.out -covermode=atomic "$@" $(go list ./... | grep -v github.com/ava-labs/subnet-evm/tests)
+go test -tags test -shuffle=on $OPRACE -timeout="${TIMEOUT:-600s}" -coverprofile=coverage.out -covermode=atomic "$@" $(go list ./... | grep -v github.com/ava-labs/subnet-evm/tests)
